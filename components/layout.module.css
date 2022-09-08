@@ -1,32 +1,32 @@
-@use "../styles/variables.scss";
+@value redColor, blueColor, greenColor from "../styles/variables.module.css";
 
 .container {
   max-width: 36rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
-  outline: 2px solid variables.$greenColor;
+  outline: 2px solid blueColor;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  &:hover {
-    background-color: yellow;
-  }
+.header:hover {
+  background-color: yellow;
+}
 
-  &.red:hover {
-    background-color: red;
-  }
+.header.red:hover {
+  background-color: red;
 }
 
 .title {
   composes: heading2Xl from "../styles/utils.module.css";
+}
 
-  &.red:hover {
-    background-color: red;
-  }
+.title.red:hover {
+  background-color: red;
 }
 
 .backToHome {
